@@ -1,0 +1,66 @@
+﻿@model IEnumerable<tocaLivrosModel.Produto>
+
+@{
+    ViewBag.Title = "Lista Produto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+
+}
+
+    @if (TempData["sucesso"] != null)
+    {
+
+        <div class="alert alert-success">
+            <strong>Sucesso!</strong> @TempData["sucesso"]
+        </div>
+    }
+    @if (TempData["erro"] != null)
+    {
+        <div class="alert alert-danger">
+            <strong>Erro!</strong> @TempData["erro"]
+        </div>
+
+
+    }
+<h2>Lista Produto</h2>
+
+<p>
+    @Html.ActionLink("Novo Produto", "Produto")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Quantidade Produto
+        </th>
+        <th>
+            Valor Produto
+        </th>
+        <th>
+            Editar/Excluir
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.Nome
+        </td>
+        <td>
+            @item.QtdProduto
+        </td>
+        <td>
+            @item.VlrProduto
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { _id=item.Id }) |
+            @Html.ActionLink("Excluir", "Delete", new { _id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

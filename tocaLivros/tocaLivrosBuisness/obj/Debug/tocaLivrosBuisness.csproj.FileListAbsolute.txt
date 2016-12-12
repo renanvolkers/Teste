@@ -1,0 +1,11 @@
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivrosBuisness.dll
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivrosBuisness.pdb
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosBuisness\obj\Debug\tocaLivrosBuisness.csprojResolveAssemblyReference.cache
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosBuisness\obj\Debug\tocaLivrosBuisness.dll
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosBuisness\obj\Debug\tocaLivrosBuisness.pdb
+C:\Users\Tree\Documents\Visual Studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivros.mdf
+C:\Users\Tree\Documents\Visual Studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivros_log.ldf
+C:\Users\Tree\Documents\Visual Studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivrosDataBase.dll
+C:\Users\Tree\Documents\Visual Studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivrosModel.dll
+C:\Users\Tree\Documents\Visual Studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivrosDataBase.pdb
+C:\Users\Tree\Documents\Visual Studio 2015\Projects\tocaLivros\tocaLivrosBuisness\bin\Debug\tocaLivrosModel.pdb

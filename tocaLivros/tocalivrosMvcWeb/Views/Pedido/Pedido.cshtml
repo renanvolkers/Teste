@@ -1,0 +1,50 @@
+﻿@model tocaLivrosModel.Pedido
+
+@{
+    ViewBag.Title = "Criar Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Pedido", "Pedido", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.ValidationSummary(true)
+
+    <h3>Criar Pedido</h3>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-8">
+            <div class="body-content">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8 proprio">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+          
+                                        <label for="sel1">Selecione  Cliente</label>
+                                        @Html.DropDownList("ddlCliente", TempData["listCliente"] as List<SelectListItem>,new {@class= "form-control" })         
+                                                          
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8 proprio">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Criar Pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+}

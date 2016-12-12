@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Criar Produto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Produto", "Produto", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.ValidationSummary(true)
+
+    <h3>Novo Produto</h3>
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-8">
+            <div class="body-content">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8 proprio">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text"  class="form-control input-lg" required="true" placeholder = "Informe seu Produto" name="txtNome" maxlength="30" id="txtNome" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" required="true" placeholder="Informe Quantidade Produto" name="txtQtdProduto" maxlength="11" id="txtQtdProduto" />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" required="true" placeholder="Informe Valor Pruduto" name="txtVlrProduto" maxlength="10" id="txtVlrProduto" />
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8 proprio">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Criar Produto</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+}

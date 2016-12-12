@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Criar Conta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Cliente", "Cliente", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.ValidationSummary(true)
+
+
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-8">
+            <div class="body-content">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8 proprio">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text"  class="form-control input-lg" required="true" placeholder = "Informe seu Nome" name="txtNome" maxlength="30" id="txtNome" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" required="true" placeholder="Informe CPF" name="txtNumeroDocumento" maxlength="11" id="txtNumeroDocumento" />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" required="true" placeholder="Informe seu RG" name="txtNumeroRegistro" maxlength="10" id="txtNumeroRegistro" />
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control input-lg" required="true" placeholder="Informe seu Email" name="txtEmail" maxlength="30" id="txtEmail" />
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control input-lg" required="true" placeholder="Informe seu Telefone" name="txtTelefone" maxlength="10" id="txtTelefone" />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" required="true" placeholder="Informe seu Cep" name="txtCep" maxlength="10" id="txtCep" />
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8 proprio">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Criar Cliente</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+}

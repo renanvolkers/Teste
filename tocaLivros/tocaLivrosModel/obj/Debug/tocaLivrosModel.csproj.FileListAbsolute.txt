@@ -1,0 +1,5 @@
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosModel\bin\Debug\tocaLivrosModel.dll
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosModel\bin\Debug\tocaLivrosModel.pdb
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosModel\obj\Debug\tocaLivrosModel.csprojResolveAssemblyReference.cache
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosModel\obj\Debug\tocaLivrosModel.dll
+c:\users\tree\documents\visual studio 2015\Projects\tocaLivros\tocaLivrosModel\obj\Debug\tocaLivrosModel.pdb

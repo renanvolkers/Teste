@@ -1,0 +1,130 @@
+﻿@model tocaLivrosModel.Pedido
+
+
+
+<h2>Adicionar Produtos ao Pedido</h2>
+
+
+
+@{
+    ViewBag.Title = "Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Adicionar", "Pedido", new { @_id = Model.Id }, FormMethod.Post, new { @class = "form-horizontal" }))
+{
+
+
+    if (TempData["sucesso"] != null)
+    {
+
+        <div class="alert alert-success">
+            <strong>Sucesso!</strong> @TempData["sucesso"]
+        </div>
+    }
+    if (TempData["erro"] != null)
+    {
+        <div class="alert alert-danger">
+            <strong>Erro!</strong> @TempData["erro"]
+        </div>
+
+
+    }
+
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-8">
+            <div class="body-content">
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8 proprio">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <label for="sel1">Número Pedido</label>
+                                        <input type="text" class="form-control input-lg" value="@Model.Id" readonly="readonly" required="true"  name="txtId" maxlength="30" id="txtId" />
+                                    </div>
+                                </div>
+
+                            </div>                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" value="@Model.Cliente.Nome" readonly="readonly" required="true" placeholder="Informe seu Nome" name="txtNome" maxlength="30" id="txtNome" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-8">
+                                    <div class="form-group">
+
+                                        <label for="sel1">Selecione  Produto</label>
+                                        @Html.DropDownList("ddlProduto", TempData["listProduto"] as List<SelectListItem>, new { @class = "form-control" })
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Adicionar Produto</button>
+
+                                    </div>
+                                </div>
+                                </div>
+
+
+
+                            </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+}
+
+<table class="table">
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Quantidade Produto
+        </th>
+        <th>
+            Valor Produto
+        </th>
+        <th>
+            Editar/Excluir
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Itens)
+    {
+        <tr>
+            <td>
+                @item.Nome
+            </td>
+            <td>
+                @item.QtdProduto
+            </td>
+            <td>
+                @item.VlrProduto
+            </td>
+            <td>
+                @Html.ActionLink("Excluir", "Delete", new { _idPedido = Model.Id, _idProduto = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+<div>
+    @Html.ActionLink("Voltar", "Pedido")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
